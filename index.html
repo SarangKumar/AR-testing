@@ -7,7 +7,22 @@
     <title>Model viewer</title>
     <!-- Import the component -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="./assets/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                $('.vr').empty();
+                console.log('hi');
+                $('.vr').attr("src", "./assets/Wizardus Maximus.glb");
+                // $('.vr').attr("src", ".\assets\Wizardus Maximus.glb");
+            });
+            $('.hi').click(function(){
+                console.log('hi');
+            });
+        });
+    </script>
     <style>
+
         model-viewer{
             width:400px;
             height: 600px;
@@ -16,8 +31,10 @@
     </style>
 </head>
 <body>
+    <button class="hi">Hi</button>
+    <button class="btn">Click to change the VR</button>
 
-    <model-viewer bounds="tight" enable-pan src="./assets/Evil Wizard.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+    <model-viewer class='vr' bounds="tight" enable-pan src="./assets/Evil Wizard.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
         <!-- <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
         </div>
