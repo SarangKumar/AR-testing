@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: aquamarine;
+}
+.model_view{
+    background-color: brown;
+    width: 400px;
+    height: 600px;
+    margin: auto 50%;
+}
+#vr {
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+.right_bar{
+    position: absolute;
+    background-color: antiquewhite;
+    height:100%;
+    width:300px;
+}
+.right_bar .item{
+    background-color: blueviolet;
+    margin:10px 0px;
+}
+.right_bar .item .model-viewer{
+    width:200px;
+}

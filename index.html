@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model viewer</title>
-    <!-- Import the component -->
+    <link rel="stylesheet" href="./assets/style.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="./assets/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.btn').click(function(){
-                $('.vr').empty();
-                console.log('hi');
-                $('.vr').attr("src", "./assets/Wizardus Maximus.glb");
-                // $('.vr').attr("src", ".\assets\Wizardus Maximus.glb");
-            });
-            $('.hi').click(function(){
-                console.log('hi');
-            });
-        });
-    </script>
-    <style>
+    <script src="./assets/jQuery.js"></script>
 
-        model-viewer{
-            width:400px;
-            height: 600px;
-            margin:0 auto;
-        }
-    </style>
 </head>
+
 <body>
+    <div class="right_bar">
+        <div class="item">
+            <model-viewer class='vr_trial' bounds="tight" enable-pan src="./assets/Evil Wizard.glb" ar
+            ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp"
+            shadow-intensity="1">
+            </model-viewer>
+        </div>
+        <div class="item">
+            <model-viewer class='vr_trial' bounds="tight" enable-pan src="./assets/Beach Viking Ship.glb" ar
+            ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp"
+            shadow-intensity="1">
+            </model-viewer>
+        </div>
+        <div class="item">
+            <model-viewer class='vr_trial' bounds="tight" enable-pan src="./assets/Viking.glb" ar
+            ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp"
+            shadow-intensity="1">
+            </model-viewer>
+        </div>
+    </div>
+
     <button class="hi">Hi</button>
     <button class="btn">Click to change the VR</button>
+    <div class="model_view">
+        <model-viewer id='vr' bounds="tight" enable-pan src="./assets/Evil Wizard.glb" ar
+            ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp"
+            shadow-intensity="1">
+            <!-- <div class="progress-bar hide" slot="progress-bar"> -->
 
-    <model-viewer class='vr' bounds="tight" enable-pan src="./assets/Evil Wizard.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
-        <!-- <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-        <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div> -->
-    </model-viewer>
-    
-    <model-viewer src="./assets/Evil Wizard.glb" camera-controls auto-rotate ar ios>
+        </model-viewer>
+    </div>
 
-    </model-viewer>    
+    <!-- <model-viewer src="./assets/Evil Wizard.glb" camera-controls auto-rotate ar ios> </model-viewer> -->
 </body>
+
 </html>
